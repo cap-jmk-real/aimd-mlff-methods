@@ -1,4 +1,4 @@
-# Paper outline — aimd-mlff-methods (methods paper; draft, local only)
+# Paper outline — aimd-mlff-methods (methods paper; draft)
 Working title: mond: packing arbitrary mixtures, active-learning training data and stable MD with machine-learned force fields — groundwork for simulating electrochemical reactions. Author: Julian M. Kleber.
 
 ## 0. Research questions and hypotheses
