@@ -6,7 +6,7 @@
 
 **Author:** Julian M. Kleber (sole author)
 
-**License:** The text of this draft is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Code in this repository is covered by the repository [LICENSE](../LICENSE).
+**License:** The text of this draft is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Code in this repository is licensed under the [MIT License](../LICENSE).
 
 ## Abstract (draft)
 We plan to study three ingredients needed for simulating electrochemical reactions with machine-learned force fields (MLFFs) at ab initio molecular dynamics (AIMD) accuracy: automatic packing of arbitrary liquid electrolyte mixtures, data-efficient generation of DFT training labels via uncertainty-driven active learning, and stable, AIMD-faithful MLFF molecular dynamics. Results will be added once the experiments in [`experiments/PLAN.md`](../experiments/PLAN.md) have been run.

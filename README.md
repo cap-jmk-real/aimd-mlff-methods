@@ -1,6 +1,6 @@
 # aimd-mlff-methods
 
-Private research repository for a **methods paper** on simulating electrochemical reactions with learned force fields at **ab initio molecular dynamics (AIMD)**-level accuracy.
+Research repository for a **methods paper** on simulating electrochemical reactions with learned force fields at **ab initio molecular dynamics (AIMD)**-level accuracy.
 
 ## Scope
 
@@ -44,7 +44,7 @@ src/            Small package wiring experiments to mlff-tutorial
 
 ## License
 
-Research code and writing in this repository are private unless otherwise noted. See `LICENSE` if present.
+Code: [MIT License](LICENSE). Paper text in `paper/`: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Author
 
