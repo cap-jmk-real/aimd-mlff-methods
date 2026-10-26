@@ -1,5 +1,7 @@
 # Experiments
 
+**Execution plan:** see [`PLAN.md`](PLAN.md) for hypothesis-level specs (H1–H5), compute budgets, parallelism, and decisions.
+
 Place reproducible study definitions here (configs, slurm/bash drivers, analysis notebooks).
 
 Suggested naming:
