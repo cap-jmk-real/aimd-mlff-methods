@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aimd-mlff-methods"
+version = "0.1.0"
+description = "Methods research: MLFF-based AIMD for electrochemical reactions"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Julian M. Kleber" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+# Install mlff-tutorial from GitHub (no code copy in this repo).
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.aimd-mlff-methods]
+mlff-tutorial-url = "https://github.com/cap-jmk-real/mlff-tutorial"

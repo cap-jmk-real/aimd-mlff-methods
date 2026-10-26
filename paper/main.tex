@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+
+\title{Methods for electrochemical reaction sampling with machine-learned force fields at AIMD-level accuracy}
+\author{Julian M. Kleber}
+\date{\today}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  Groundwork for ab initio molecular dynamics (AIMD)--accurate sampling of electrochemical interfaces using machine learning force fields (MLFFs): arbitrary electrolyte mixtures, stability of MLFF molecular dynamics, and reproducible training-data generation.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+% Motivation: cost of AIMD at electrified interfaces; role of MLFFs.
+
+\section{Background}
+\label{sec:background}
+% MLFFs, OpenMM integration, mixture systems (mlff-tutorial, mond, openmm-mixtures).
+
+\section{Methods}
+\label{sec:methods}
+\subsection{Training-data generation}
+\label{sec:data}
+\subsection{Mixture systems and composition dependence}
+\label{sec:mixtures}
+\subsection{MLFF molecular dynamics and stability criteria}
+\label{sec:stability}
+
+\section{Results}
+\label{sec:results}
+% Placeholder for forthcoming experiments under ../experiments/.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+\section*{Data and software availability}
+Tutorial and library dependencies: \url{https://github.com/cap-jmk-real/mlff-tutorial}, \url{https://github.com/cap-jmk-real/mond}, and \url{https://github.com/cap-jmk-real/openmm-mixtures}. Research artifacts: private repository \texttt{aimd-mlff-methods}.
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}
