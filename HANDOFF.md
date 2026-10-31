@@ -49,24 +49,23 @@ This project establishes the computational groundwork for simulating electrochem
 
 ## 4. Immediate Step-by-Step Instructions (Incoming Agent Runbook)
 
-### Step 1: Stage 0 (S0) Environment & Timing Calibration on `engine`
-SSH into `engine` and initialize the dedicated environment:
+### Step 1: Stage 0 (S0) Environment & Timing Calibration on `engine` (COMPLETE)
+Environment active at `/home/s4il0r/micromamba/envs/aimd` with PyTorch 2.5.1+cu121, MACE-torch 0.3.16, NequIP 0.6.2, PySCF 2.14.0, tblite 0.7.0, and `gpu4pyscf-cuda12x`.
+
+Benchmark results logged in [`experiments/s0_timing_report.json`](experiments/s0_timing_report.json):
+* **tblite (GFN2-xTB):** **11.5 ms** per 25-atom cluster (candidate presampling is ultra-fast).
+* **PySCF CPU (32 threads, $\omega$B97M-V/def2-SVP):** **254.1 s (4.2 min)** for 25-atom $\text{Li}^+(\text{MeCN})_4$.
+* **PySCF CPU (32 threads, $\omega$B97M-V/def2-TZVP):** **355.6 s (5.9 min)** for 25-atom $\text{Li}^+(\text{MeCN})_4$ (SCF: 4.75 min, nuclear gradients: 1.17 min).
+* **Validation:** Energy difference between CPU and GPU is $<2 \times 10^{-12}\text{ Hartree}$ (machine precision match).
+
+### Step 2: Integrator Smoke Test (COMPLETE)
+Velocity Verlet and NVE energy conservation test suite:
 ```bash
-ssh engine
-cd /home/s4il0r/aimd-mlff-methods
-micromamba create -n aimd_env python=3.11 -y
-micromamba activate aimd_env
-pip install mace-torch ase tblite ".[dev]"
+pytest tests/ -v  # 13/13 passed in 0.55s
 ```
 
-### Step 2: Run Integrator Smoke Test
-Verify that the velocity Verlet integrator operates with zero unphysical drift:
-```bash
-pytest tests/ -v
-```
-
-### Step 3: Calibrate DFT Single-Point Timings
-Benchmark the DFT single-point calculation (target: 60–100 atom cluster $\approx 10\text{ min}$) to lock in the label pool budget for Stage S3.
+### Step 3: Stage 1 (S1) Methanol Sanity & Stage 2 (S2) `mond` Packing Benchmark
+Proceed with S1 mini-benchmark and S2 packing density error evaluation (<2% error vs. experiment across S1, S2, S3).
 
 ### Step 4: Fill In Results & Compile Paper
 Populate experimental tables in [`paper/main.tex`](paper/main.tex) as each stage (S1–S6) completes and compile via:
